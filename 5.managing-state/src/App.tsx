@@ -1,5 +1,3 @@
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 import Counter1 from './components/use-counter/counter-1';
 import Counter2 from './components/use-counter/counter-2';
@@ -8,19 +6,14 @@ import {
   Counter1 as StoreCounter1,
   Counter2 as StoreCounter2,
 } from './components/use-store/counter';
+import {
+  Counter as SelectorCounter,
+  TextEditor,
+} from './components/use-store-selector/counter';
 
 function App() {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
       <div className="card">
         <div style={{ border: '1px solid white', paddingBottom: '10px' }}>
           <h2>let state</h2>
@@ -39,13 +32,12 @@ function App() {
           <StoreCounter2 />
         </div>
 
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <div style={{ border: '1px solid white', paddingBottom: '10px' }}>
+          <h2>use-store-selector</h2>
+          <SelectorCounter />
+          <TextEditor />
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
